@@ -1,0 +1,24 @@
+.greet{
+    margin: 20 auto;
+    text-align: center;
+}
+.enter{
+    margin: 0 auto;
+    text-align: center;
+}
+.add-task{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.new-task{
+    padding: 5px;
+    width: 50%;
+}
+.list-task{
+    margin: 0 auto;
+    padding: 10px;
+    width: 60%;
+    text-align: center;
+}
+
