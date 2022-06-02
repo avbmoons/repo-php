@@ -10,11 +10,12 @@
 </head>
 
 <body>
-    <h1 class="greet"><?= $pageHeader ?></h1>
+    <h2 class="greet"><?= $pageHeader ?></h2>
 
     <?php if (is_null($username)) : ?>
         <div class="enter">
             <a href="/?controller=security">Войти</a>
+            <a href="/?controller=registration">Зарегистрироваться</a>
         </div>
 
     <?php else : ?>

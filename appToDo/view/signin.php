@@ -27,9 +27,8 @@
         <div class="row">
             <form method="post" class="sign-in-form mt-5 mt-md-5 col-lg-4 col-md-5 col-sm-8">
                 <h3>Авторизация</h3>
-                <div class="alert alert-danger <?= $error === null ?  'visually-hidden' : '' ?>">
+                <div class="alert alert-danger <?= $error === null ? 'visually-hidden' : '' ?>">
                     <?= $error ?>
-                    <!-- Ошибка -->
                 </div>
                 <label for="username" class="visually-hidden">Имя пользователя</label>
                 <input type="text" id="username" name="username" class="form-control mt-3" placeholder="Имя пользователя" required="" autofocus="">

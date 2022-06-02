@@ -31,11 +31,28 @@
     </form>
 
     <?php foreach ($tasks as $task) : ?>
-        <div class="list-task">
-            <?= $task->getDescription() ?> [Done]
+        <div class="list-task" id="<?= $task->getId() ?>">
+            <?= $task->getDescription() ?> <a href="/?controller=tasks&action=done&id=<?= $task->getId() ?>">[Done]</a>
+            <button class="done" data-id="<?= $task->getId() ?>">Done</button>
         </div>
 
     <?php endforeach; ?>
+
+    <script>
+        let buttons = document.querySelectorAll('.done');
+        buttons.forEach((elem) => {
+            elem.addEventListener('click', () => {
+                let id = elem.getAttribute('data-id');
+                (
+                    async () => {
+                        const response = await fetch('/?controller=tasks&action=apidone&id=' + id);
+                        const answer = await response.json();
+                        document.getElementById(answer.id).remove();
+                    }
+                )();
+            })
+        })
+    </script>
 
 </body>
 
